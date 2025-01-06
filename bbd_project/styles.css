@@ -1,22 +1,4 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-:root {
-    --blue: #007bff;
-    --yellow: #ffc107;
-    --white: #fff;
-    --light: #f8f9fa;
-    --dark: #343a40;
-}
-
-body {
-	font-weight: 400;
-	font-size:14px;
-	color:#888;
-}
 
 .preloader {
     position: fixed;
@@ -64,26 +46,114 @@ body {
 .header {
     height: auto;
     width: 100%;
-    padding: 0 10%;
-    background-color: var(--dark);
 }
 
 .header .top-bar {
     width: 100%;
     padding: 15px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.container {
+.header .top-link {
+    float: left;
+}
+
+.header li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.header li:last-child {
+    margin-right: 0px;
+}
+
+.header .top-contact {
+    float: right;
+}
+
+.header .top-contact li i {
+    color: var(--blue);
+    margin-right: 8px;
+}
+
+.fa-phone:before {
+    content: "\f095";
+}
+
+.top-nav {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
+.header .logo {
+    float: left;
+    margin-top: 18px;
 }
+
+.header .logo img {
+    max-width: 67%;
+}
+
+.header .nav li {
+    margin-right: 15px;
+    float: left;
+    position: relative;
+}
+
+.header .nav li a {
+    color: var(--font-dark);
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 25px 12px;
+    position: relative;
+    display: inline-block;
+    position: relative;
+}
+
+    .header .nav li a::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width:0%;
+        background: var(--blue);
+        border-radius: 5px 5px 0 0;
+        opacity:0;
+        visibility:hidden;
+        -webkit-transition:all 0.4s ease;
+        -moz-transition:all 0.4s ease;
+        transition:all 0.4s ease;
+    }
+
+    .header .nav li.active a:before{
+        opacity:1;
+        visibility:visible;
+        width: 100%;
+    }
+
+    .header .nav li.active a{
+        color: var(--blue);
+    }
+
+    .header .nav li:hover a:before{
+        opacity:1;
+        width: 100%;
+        visibility:visible;
+    }
+
+    .header .nav li:hover a{
+        color: var(--blue);
+    }
+
+    .header .nav li.active a {
+        color: var(--blue);
+    }
+
+.header .top-nav .get-quote {
+    float: right;
+}
+
+
+
   
 

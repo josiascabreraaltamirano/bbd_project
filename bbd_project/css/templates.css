@@ -2,3 +2,128 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.column15, .column20, .column25, .column30, .column33, .column50, .column55, .column60 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.column15 {
+    flex: 0 0 15%;
+    max-width: 15%;
+}
+
+.column20 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.column25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+} 
+
+.column30 {
+    flex: 0 0 30%;
+    max-width: 30%;
+} 
+
+.column33 {
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+} 
+
+.column50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+} 
+
+.column55 {
+    flex: 0 0 55%;
+    max-width: 55%;
+} 
+
+.column60 {
+    flex: 0 0 60%;
+    max-width: 60%;
+} 
+
+.get-quote {
+    margin-top: 12px;
+}
+
+.btn {
+    color: var(--white);
+    padding: 13px 25px;
+    text-align: center;
+    line-height: 1.5;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-weight: 500;
+    background: var(--blue);
+    position: relative;
+    box-shadow: none;
+    display: inline-block;
+    user-select: none;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--dark);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: var(--white);
+}
+
+.btn:hover:before{
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
